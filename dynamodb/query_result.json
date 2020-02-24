@@ -1,0 +1,4370 @@
+[
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T16:41:12.082+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T09:06:24.103+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T08:41:24.140+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T11:51:28.247+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T08:11:24.292+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T18:15:40.838+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T18:30:41.725+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T09:40:37.353+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T09:26:24.100+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T13:56:12.173+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T10:06:19.284+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T08:31:22.132+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T12:36:12.007+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T08:26:02.336+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T12:16:11.797+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T09:16:24.696+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T17:50:39.543+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T16:00:48.765+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T11:11:10.356+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T16:30:49.452+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T09:07:01.266+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T17:31:06.820+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T08:26:24.494+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T09:50:36.317+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T15:35:59.345+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T09:11:02.261+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T16:05:48.552+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T14:36:07.446+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T09:15:39.171+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T18:40:52.703+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T09:35:37.176+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T09:01:02.475+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T15:00:58.522+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T18:20:40.688+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T10:36:00.304+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T13:51:12.213+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T10:21:09.411+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T11:56:27.788+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T07:56:23.942+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "0"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T15:30:59.466+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T17:26:06.718+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T17:16:06.604+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T13:26:11.890+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T14:31:14.527+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T10:10:35.484+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T15:10:58.285+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T18:05:39.692+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T12:46:11.742+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T08:51:08.203+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T09:20:39.060+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T10:11:16.532+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T12:01:28.119+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T12:41:11.910+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T15:45:48.488+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T10:31:09.393+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T15:40:48.586+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T08:16:23.960+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T16:51:11.812+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T08:06:24.002+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "0"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T15:15:58.685+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T14:45:58.450+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T08:31:02.300+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T12:11:11.946+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T09:31:24.170+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T17:45:39.685+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T14:26:14.284+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T14:16:14.403+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T10:01:16.505+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T10:15:56.382+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T13:41:12.052+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T13:11:11.873+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T09:56:16.593+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T17:21:06.669+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T12:26:11.769+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T08:51:01.980+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T10:06:16.483+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T11:46:27.854+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T09:51:13.025+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T12:06:28.282+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T16:25:49.579+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T16:35:49.552+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T09:06:02.223+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T09:41:13.047+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T14:55:58.303+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T08:41:02.808+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T18:50:38.588+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T09:25:39.068+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T08:21:02.277+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "0"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T18:35:42.134+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T09:11:24.445+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T13:16:11.811+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T15:25:59.257+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T13:36:12.007+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T10:01:26.463+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T11:20:34.591+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T08:46:24.062+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T17:01:06.631+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T09:00:54.073+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T09:31:26.376+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T18:25:42.247+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T18:55:38.922+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T17:06:07.135+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T10:20:35.503+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T10:15:35.498+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T08:36:24.117+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T16:20:49.381+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T14:11:14.249+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T17:55:39.673+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T10:26:09.407+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T12:56:11.835+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T14:01:11.415+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T12:21:12.192+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T11:36:02.721+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T11:01:12.847+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T14:50:58.254+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T13:06:11.781+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T13:01:11.855+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T12:51:12.124+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T11:15:34.643+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T09:21:24.626+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T11:00:50.082+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T11:31:19.831+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T10:50:49.248+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T14:06:14.173+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T14:40:58.487+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T08:55:54.088+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T09:46:13.011+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T08:56:08.037+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T11:25:48.661+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T09:36:12.011+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T10:55:49.184+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T17:40:39.659+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T17:36:06.580+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T13:21:12.064+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T09:45:36.390+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T17:11:06.789+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T10:51:14.676+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T08:46:02.376+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T15:20:58.701+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T10:56:14.660+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T10:31:00.193+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T09:56:13.134+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T16:46:11.773+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T18:00:39.938+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T16:15:49.677+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T18:10:40.066+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T10:46:00.285+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T15:50:48.518+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T10:41:00.322+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T13:31:12.149+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T10:25:35.175+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T18:45:38.043+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T10:46:14.676+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T11:06:08.211+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T11:06:12.742+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T11:41:28.035+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T12:31:11.815+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T15:55:48.435+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T10:41:14.644+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T16:10:48.460+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T16:56:22.633+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T13:46:12.415+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T08:21:24.156+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T08:01:24.403+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "0"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T10:36:14.621+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-20T08:36:02.159+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T15:05:58.323+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        },
+        {
+            "single_rider_wait_minutes": {
+                "N": "-1"
+            },
+            "entity_id": {
+                "S": "P1AA01"
+            },
+            "park_id": {
+                "S": "0/P/P1"
+            },
+            "status": {
+                "S": "OPERATING"
+            },
+            "single_rider_is_available": {
+                "BOOL": false
+            },
+            "response_timestamp": {
+                "S": "2020-02-19T14:21:14.421+0000"
+            },
+            "posted_wait_minutes": {
+                "N": "5"
+            },
+            "type": {
+                "S": "Attraction"
+            }
+        }
+    ]
