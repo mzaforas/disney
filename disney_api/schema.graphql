@@ -1,0 +1,4379 @@
+"""A container defining content which describes a guest activity."""
+interface Activity {
+  """Unique Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+}
+
+"""
+ActivitySchedule is a container for values from an Activity plus a collection schedules from the Bio service
+"""
+type ActivitySchedule {
+  """Id of Activity"""
+  id: String
+
+  """Name of activity"""
+  name: String
+
+  """iconFont"""
+  iconFont: String
+
+  """Location of the activity, e.g. Disneyland Park"""
+  location: Location
+
+  """
+  Location of the activity within the scope of the Location, e.g. Discoveryland
+  """
+  subLocation: Location
+
+  """Url to activity page"""
+  url: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Unique idetinfier of the activity's URL"""
+  containerTcmId: String
+
+  """
+  Container of data from the activity's page, This was added to allow the mobile
+  application to see the title of the activity page and also infer a page type
+  using the page's region data
+  """
+  pageLink: PageLink
+
+  """Collection of schedule information for the activity coming from Bio"""
+  schedules(date: String!, types: [ActivityScheduleStatusInput]!): [Schedule]
+
+  """The activity's entity type, e.g. Entertainment"""
+  type: String
+
+  """The activity's entity subType, e.g Stage Show"""
+  subType: String
+
+  """Link to the activity's image"""
+  heroMediaMobile: Media
+
+  """Link to the activity's thumbnail image"""
+  squareMediaMobile: Media
+
+  """
+  A string stating if the activity is to be hidden from anywhere. The string
+  values are declared in the CMS (Tridion). Example values include "Hide from
+  the Mobile App", "Hide from Web List + Mobile App", "Hide from the Listing Page"
+  """
+  hideFunctionality: String
+
+  """
+  Collection of Facets that describe some of the features and characteristics of an activity
+  """
+  facets: [Facet]
+
+  """Short description"""
+  shortDescription: String
+
+  """Thumb Media"""
+  thumbMedia: Media
+}
+
+"""Input container pairs an activity type with ScheduleStatus"""
+input ActivityScheduleStatusInput {
+  """Activity type text string"""
+  type: String
+
+  """Collection of schedule types of interest"""
+  status: [ScheduleStatus]
+}
+
+"""Postal address"""
+type Address {
+  line1: String
+  line2: String
+  city: String
+  postalCode: String
+  country: String
+}
+
+type AnnualPass implements Component {
+  id: String
+  name: String
+  url: String
+  iconFont: String
+  calendar: AnnualPassCalendar
+  validityPeriod: String
+  annualPrice: String
+  monthlyPrice: String
+  legendCalendar: String
+  cardMedia: Media
+  calendarMedia: Media
+  backgroundColor: [String]
+  linkAppNonMembers: String
+  linkAppMembers: String
+}
+
+type AnnualPassBenefit {
+  id: String
+  name: String
+  icon: String
+  price: String
+  value: String
+}
+
+type AnnualPassBenefits {
+  apInformation: [AnnualPass]
+  listOfBenefits: [AnnualPassBenefit]
+}
+
+type AnnualPassCalendar {
+  startDate: String
+  endDate: String
+  restrictedDates: [String]
+}
+
+type AnnualPasses implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  annualPasses: [AnnualPass]
+}
+
+type AnnualPassport {
+  id: String
+  name: String
+  mediaId: String
+  link: String
+  pageLink: PageLink
+  benefits: [AnnualPassportBenefits] @deprecated(reason: "AnnualPassport to be deprecated along with AnnualPassportBenefits. These will be replaced with AnnualPass and AnnualPassBenefits")
+}
+
+type AnnualPassportBenefits {
+  id: String
+  name: String
+  icon: String
+  value1: String
+  value2: String
+}
+
+type AnnualPassportCalendar {
+  apId: String
+  description: String
+  legend: String
+  errorMessage: String
+  restrictedDates: [String]
+  startDate: String
+  endDate: String
+}
+
+type AnnualPassportCalendars implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  calendars: [AnnualPassportCalendar]
+}
+
+type AnnualPassportComparison implements Content {
+  contentId: String
+  containerTcmId: String
+  url: String
+  passports: [AnnualPassport] @deprecated(reason: "To be replaced with AnnualPassBenefits")
+  annualPassBenefits: [AnnualPassBenefits]
+  focusedPassportIdOnMobile: String
+}
+
+type AnnualPassportForm implements Content {
+  contentId: String
+  containerTcmId: String
+  url: String
+  options: [AnnualPassportFormOption]
+}
+
+type AnnualPassportFormOption {
+  key: String
+  label: String
+  description: String
+  passOptions: [Drop]
+  button: Button
+  disclaimer: String
+}
+
+type Answer {
+  value: String
+  description: String
+  key: String
+  id: String
+  answerText: String
+  iconFont: String
+  media: Media
+  relatedQuestion: String
+}
+
+type ApplicationMessage {
+  """Unique Id of a content component"""
+  id: String
+
+  """Name or title of the component"""
+  name: String
+
+  """Subtitle of content"""
+  subtitle: String
+
+  """Description designed for mobile devices"""
+  shortDescriptionMobile: String
+
+  """List of HEX color values used in messaging"""
+  backgroundColors: [String]
+
+  """Multimedia Component Link - mobile only"""
+  heroMediaMobile: Media
+
+  """Call to action - link to further content"""
+  button: Button
+
+  """Name of a display policy. For exmaple a policy might be displayOnsite"""
+  displayPolicy: String
+
+  """
+  Date the application message is valid from in UTC date string using ISO_LOCAL_DATE_TIME format
+  """
+  dateUp: String
+
+  """
+  Date the application message expires in UTC date string using ISO_LOCAL_DATE_TIME format
+  """
+  dateDown: String
+
+  """List of key/value linking to message configuration resources"""
+  config: [Definition]
+}
+
+type ApplicationMessages implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  messages: [ApplicationMessage]
+}
+
+"""Asset is a media in a media gallery"""
+type Asset {
+  type: String
+  referenceKey: String
+  thumbMedia: Media
+  media: Media
+  sourceForVideo: String
+  video360: Boolean
+  sourceForPanorama: Media
+}
+
+"""
+Attraction represents a collection of the general settings and information about
+an attraction. An attraction in an activity with regulations for guests to adhere to.
+"""
+type Attraction implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """
+  Collection of height requirements/restrictions for guests (use in filter)
+  """
+  height: [Facet]
+
+  """Collection of age requirements/restrictions for guests (use in filter)"""
+  age: [Facet]
+
+  """List of interest for this activity (use in filter)"""
+  interests: [Facet]
+
+  """True if has fast pass access"""
+  fastPass: Boolean
+
+  """True if has single seats"""
+  singleRider: Boolean
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """
+  Collection of mobility requirements/restrictions for guests (use in filter)
+  """
+  mobilityDisabilities: [Facet]
+
+  """Collection of animals service (use in filter)"""
+  serviceAnimals: [Facet]
+
+  """
+  Collection of sensory disabilities requirements/restrictions for guests (use in filter)
+  """
+  sensoryDisabilities: [Facet]
+
+  """
+  Collection of physical aspects for guests to consider, not restricting (use in filter)
+  """
+  physicalConsiderations: [Facet]
+
+  """True if a physical warning need to be displayed"""
+  physicalWarning: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+}
+
+type BestDeal {
+  titleDropdownLOS: String
+  dropdownLOS: [Choice]
+  titleDropdown2: String
+  calendarTitle: String
+  legendBestDeal: String
+  legendOther: String
+  startDate: String
+  endDate: String
+  errorMessage: String
+  modalTitle: String
+  description: String
+  otherDescription: String
+  buttonLabel: String
+}
+
+type BlueModuleCard {
+  body: String
+  tooltip: String
+  button: Button
+  startDate: String
+  endDate: String
+  analyticsId: String
+  title: String
+  platform: String
+}
+
+"""Book is a category in a media gallery"""
+type Book {
+  title: String
+  referenceKey: String
+  thumbMedia: Media
+  iconFont: String
+  chapters: [Chapter]
+}
+
+"""
+Breadcrumb or (fil d'Arianne) defines the list of directory in the actual path
+"""
+type Breadcrumb {
+  text: String
+  url: String
+  pageLink: PageLink
+}
+
+type Brochure {
+  type: String
+  media: Media
+  header: String
+  title: String
+  subtitle: String
+  subsubtitle: String
+  description: String
+  button: Button
+  code: String
+  eventCode: String
+  actionCode: String
+  EBrochurePage: IFrame
+}
+
+"""Button with a text and an url or a link"""
+type Button {
+  text: String
+  url: String
+  target: String
+  pageLink: PageLink
+  analyticsId: String
+}
+
+"""Specific overview to define further information as a small chapter"""
+type Card {
+  template: String
+  header: String
+  body: String
+  media: Media
+  url: String
+  pageLink: PageLink
+  target: String
+}
+
+"""Carwash is a carwash content"""
+type Carwash implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  carwashID: String
+  carwashHeader: CarwashHeader
+  carwashColumn: CarwashColumn
+  carwashLines: [CarwashLine]
+}
+
+type CarwashColumn {
+  columns: [Column]
+}
+
+type CarwashDetail {
+  description: String
+  pepFont: String
+  tooltipDescription: String
+}
+
+type CarwashHeader {
+  divider: String
+  media: Media
+  description: String
+  pepFont: String
+  tooltipDescription: String
+}
+
+type CarwashLine {
+  title: CarwashHeader
+  carwashDetails: [CarwashDetail]
+  subCategory: String
+}
+
+"""Chapter is a sub category in a media gallery"""
+type Chapter {
+  title: String
+  referenceKey: String
+  thumbMedia: Media
+  subChapters: [SubChapter]
+}
+
+type Choice {
+  id: String
+  value: String
+}
+
+"""A container for information related to activity closures"""
+type Closure {
+  id: String
+  startDate: String
+  endDate: String
+}
+
+"""Code is just one filed to declare an HTML code"""
+type Code implements Content {
+  """Unique Id of a content component"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  code: String
+}
+
+type Column {
+  value: String
+  description: String
+}
+
+interface Component {
+  name: String
+}
+
+type ComponentTag {
+  id: String
+  templateId: String
+  regionIndex: Int
+}
+
+"""A Content object defined by an identifier and a url of it's location."""
+interface Content {
+  """Unique Id of a content component"""
+  contentId: String
+
+  """Url of the page containing the content component"""
+  url: String
+
+  """Id of the container"""
+  containerTcmId: String
+}
+
+"""Country is a country name, a flag and a list a regions"""
+type Country {
+  name: String
+  flag: Media
+  regions: [CountryRegion]
+}
+
+"""CountryRegion is used to define a market"""
+type CountryRegion {
+  name: String
+  regionCode: String
+  languageCode: String
+  countryCode: String
+}
+
+type CrisisMessage {
+  """Message status, either 'on' or 'off'"""
+  status: String
+
+  """
+  String states which platform to display the message on: 'Web', 'App', 'Package', 'Ticket'
+  """
+  platform: String
+
+  """Title of crisis message"""
+  title: String
+
+  """Body of crisis message"""
+  content: String
+
+  """List of links from crisis message"""
+  links: [Link]
+  property: String
+
+  """List of key/value linking to message configuration resources"""
+  config: [Definition]
+}
+
+type CrisisMessages implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  messages: [CrisisMessage]
+}
+
+"""
+CtaCard is a specific component to display an information with a button or/and a tooltip
+"""
+type CtaCard {
+  body: String
+  tooltip: String
+  button: Button
+}
+
+"""Custom is a custom content"""
+type Custom implements Content {
+  contentId: String
+  containerTcmId: String
+  url: String
+  id: String
+  name: String
+  heroMedia: Media
+  heroMediaMobile: Media
+  urlFriendlyId: String
+  shortDescription: String
+  button: Button
+  cards: [Card]
+  disclaimer: String
+}
+
+type Definition implements KeyDefinition {
+  key: String
+  value: String
+}
+
+type Dictionary implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  labels: [Definition]
+}
+
+type DictionaryMeta {
+  resourceId: String
+  resourceUrl: String
+  templateId: String
+  xPaths: [XPathMeta]
+}
+
+"""
+DiningEvent represents a collection of the general settings and information about a dining event at a restaurant
+"""
+type DiningEvent implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+  drsUrl: String
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """Collection of information about the food (use in filter)"""
+  cuisines: [Facet]
+
+  """Collection of information about the service (use in filter)"""
+  serviceTypes: [Facet]
+
+  """Price information (use in filter)"""
+  price: Facet
+
+  """True if web booking is enabled"""
+  drs: Boolean
+
+  """Collection of dining plans (use in filter)"""
+  diningPlans: [Facet]
+
+  """Collection of restaurant where the show is available"""
+  restaurants: [Restaurant]
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+}
+
+"""
+DiningShow represents a collection of the general settings and information about
+a dinner show at a restaurant. A dining show differs from a dining event in that
+an event could simply be dinner with a theme, whereas a show will have live entertainment.
+"""
+type DinnerShow implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Url to booking this restaurant from internet"""
+  drsUrl: String
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """Collection of information about the food (use in filter)"""
+  cuisines: [Facet]
+
+  """Collection of information about the service (use in filter)"""
+  serviceTypes: [Facet]
+
+  """Price information (use in filter)"""
+  price: Facet
+
+  """True if web booking is enabled"""
+  drs: Boolean
+
+  """Collection of dining plans (use in filter)"""
+  diningPlans: [Facet]
+
+  """Collection of restaurant where the show is available"""
+  restaurants: [Restaurant]
+
+  """Information about the seating plan"""
+  seatingChart: Card
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+}
+
+type DisneySitesMenu {
+  title: String @deprecated(reason: "Will be deleted with footer v2.1")
+  links: [Link] @deprecated(reason: "Will be deleted with footer v2.1")
+  links2: [Link] @deprecated(reason: "Will be deleted with footer v2.1")
+}
+
+type DnxGlobal implements Content {
+  contentId: String
+  containerTcmId: String
+  url: String
+  id: String
+  name: String
+  titleIconMedia: String
+  wowImageLanding: Media
+  wowImageLandingMobile: Media
+  descriptionCTA: String
+  tooltip: String
+  blueModuleLink: Button
+  titleStoryTelling: String
+  descriptionStoryTelling: String
+  tooltipStoryTelling: String
+  disclaimer: String
+}
+
+"""Drawer is a specific component with a list of cards"""
+type Drawer {
+  title: String
+  subTitle: String
+  media: Media
+  cards: [Card]
+}
+
+type Drop {
+  id: String
+  label: String
+  url: String
+  pageLink: PageLink
+
+  """Below is for Contact Us only"""
+  description: String
+  hasFields: Boolean
+}
+
+type DropDown implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  droplist: [DropList]
+}
+
+type DropList {
+  key: String
+  drops: [Drop]
+}
+
+"""Duration in hours and minutes"""
+type Duration {
+  hours: Int
+  minutes: Int
+}
+
+type EmailList implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  subjects: [EmailSubject]
+}
+
+type EmailProperties {
+  from: String
+  to: String
+  subject: String
+  templateType: String
+  emailTemplate: EmailTemplate
+}
+
+type EmailPropertiesForContactUs {
+  emails: [EmailProperties]
+}
+
+type EmailSubject {
+  id: String
+  emails: [EmailProperties]
+}
+
+type EmailTemplate {
+  emailContent: String
+}
+
+type EmbeddedStoryCard {
+  title: String
+  subTitle: String
+  text: String
+  media: [Media]
+  url: String
+  pageLink: PageLink
+  target: String
+  analyticsId: String
+  iconFont: String
+}
+
+"""
+Entertainment represents a collection of the general settings and information about Entertainment
+"""
+type Entertainment implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """Container with the duration of this activity"""
+  duration: Duration
+
+  """Geo-location of a road, by example for the parade"""
+  road: [MapCoordinates]
+
+  """List of interest for this activity (use in filter)"""
+  interests: [Facet]
+
+  """Collection of age requirements/restrictions for guests (use in filter)"""
+  age: [Facet]
+
+  """
+  Collection of mobility requirements/restrictions for guests (use in filter)
+  """
+  mobilityDisabilities: [Facet]
+
+  """List of type of entertainment (use in filter)"""
+  entertainmentTypes: [Facet]
+
+  """
+  Collection of sensory disabilities requirements/restrictions for guests (use in filter)
+  """
+  sensoryDisabilities: [Facet]
+
+  """
+  Collection of RelatedLocation which are a collection of locations related to this activity
+  """
+  relatedLocations: [RelatedLocation]
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """ISO date string when activity starts"""
+  openDate: String
+
+  """ISO date string when activity finished"""
+  endDate: String
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+}
+
+"""
+EntertainmentVenue represents a collection of the general settings and
+information about an entertainment venue (e.g Disney Village).
+"""
+type EntertainmentVenue implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+
+  """iconFont"""
+  iconFont: String
+}
+
+"""Error is used to define an error page or srceen"""
+type Error implements Content {
+  """Unique Id of a content component"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  title: String
+  message: String
+  media: Media
+  code: Int
+}
+
+"""
+Event represents a collection of the general settings and information about a Event activiy
+"""
+type Event implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """Container with the duration of this activity"""
+  duration: Duration
+
+  """ISO date string when activity starts"""
+  openDate: String
+
+  """ISO date string when activity finished"""
+  endDate: String
+
+  """List of interest for this activity (use in filter)"""
+  interests: [Facet]
+
+  """
+  Collection of mobility requirements/restrictions for guests (use in filter)
+  """
+  mobilityDisabilities: [Facet]
+
+  """Collection of experience type (use in filter)"""
+  experienceTypes: [Facet]
+
+  """Collection of age requirements/restrictions for guests (use in filter)"""
+  age: [Facet]
+
+  """
+  Collection of RelatedLocation which are a collection of locations related to this activity
+  """
+  relatedLocations: [RelatedLocation]
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+  associatedActivities: [Content]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+}
+
+type ExternalLink {
+  url: String
+}
+
+"""Activity features used in filter"""
+type Facet {
+  value: String
+  urlFriendlyId: String
+  iconFont: String
+  id: String
+}
+
+"""FAQDetail is a FAQ question/answer"""
+type FAQDetail implements Content {
+  """Unique Id of a content component"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  pageLink: PageLink
+  title: String
+  urlFriendlyId: String
+  question: String
+  answer: String
+  relatedFaqs: [FAQDetail]
+  priority: Boolean
+  topic: String
+  topicUrl: String
+}
+
+"""
+FAQListing is the head of a FAQ listing, the list of FAQ must be load by an other query
+"""
+type FAQListing implements Content {
+  """Unique Id of a content component"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  title: String
+  urlFriendlyId: String
+  shortDescription: String
+  longDescription: String
+}
+
+type Field {
+  formType: String
+  mandatory: Boolean
+  title: String
+  exclusiveBenefitsLinkLabel: String
+  title2: String
+  type: String
+  dataType: String
+  emailSubjects: [Type]
+  enableOption: Boolean
+  tooltip: String
+  helpMessage: String
+  errorMessage: String
+  minNumber: Int
+  maxNumber: Int
+}
+
+type FieldTag {
+  xpath: String
+  regionIndex: Int
+}
+
+type Footer implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  croTel: String
+  croDescription: String
+  croDisclaimer: String
+  columns: [FooterMenu]
+  signUpMenu: SignUpMenu @deprecated(reason: "Will be deleted with footer v2.1")
+  socialMenu: SocialMenu
+  disneySitesMenu: DisneySitesMenu @deprecated(reason: "Will be deleted with footer v2.1")
+  labels: [Definition]
+}
+
+type FooterMenu {
+  items: [Item]
+}
+
+type Form implements Content {
+  """Content"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  title: String
+  introduction: String
+  errorMessage: String
+  description: String
+  errorLayer: PopupLayer
+  infoLayer: PopupLayer
+  emailProperties: EmailProperties
+  emailPropertiesForContactUs: [EmailPropertiesForContactUs]
+  actionCode: String
+  eventCode: String
+  formSubSections: [FormSubSection]
+  link: Button
+  forgotPasswordLabel: String
+  forgotPasswordModal: Form
+  cancel: Button
+}
+
+type FormSubSection {
+  subSectionType: String
+  formFields: [Field]
+}
+
+type GeneralContent implements Content {
+  contentId: String
+  containerTcmId: String
+  url: String
+  roles: [String]
+  sections: [Section]
+}
+
+type GoldenQuestion {
+  """id"""
+  id: String
+
+  """
+  Meta info giving the question type e.g. 'Multiple Answer', 'Text-based Answer', 'Multiple Choice'
+  """
+  questionType: String
+
+  """Meta info to describe the arrangement of the question"""
+  layout: String
+
+  """media"""
+  media: Media
+
+  """title"""
+  title: String
+
+  """Subtitle"""
+  subtitle: String
+  answerList: [Answer]
+  backgroundColors: [String]
+}
+
+type GoldenQuestions implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  goldenQuestionList: [GoldenQuestion]
+}
+
+"""
+GuestService represents a collection of the general settings and information about guest services
+"""
+type GuestService implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """
+  Collection of service for guests related to this activity (use in filter)
+  """
+  guestServices: [Facet]
+
+  """
+  Collection of RelatedLocation which are a collection of locations related to this activity
+  """
+  relatedLocations: [RelatedLocation]
+
+  """Icon media resource"""
+  iconMedia: Media
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+}
+
+type Header implements Resource {
+  resourceId: String @deprecated(reason: "Header has been replaced by NavigationHeader")
+  resourceTemplate: String @deprecated(reason: "Header has been replaced by NavigationHeader")
+  menus: [HeaderMenu] @deprecated(reason: "Header has been replaced by NavigationHeader. Use NavigationHeader and NavigationHeader.menus")
+  labels: [Definition] @deprecated(reason: "Header has been replaced by NavigationHeader")
+}
+
+type HeaderMenu {
+  link: Link @deprecated(reason: "Header and it's family of objects, including HeaderMenu, have been replaced by NavigationHeader. HeaderMenu has been replaced by NavigationHeaderMenu")
+  icon: String @deprecated(reason: "Header and it's family of objects, including HeaderMenu, have been replaced by NavigationHeader. HeaderMenu has been replaced by NavigationHeaderMenu")
+  direction: String @deprecated(reason: "Header and it's family of objects, including HeaderMenu, have been replaced by NavigationHeader. HeaderMenu has been replaced by NavigationHeaderMenu")
+  type: String @deprecated(reason: "Header and it's family of objects, including HeaderMenu, have been replaced by NavigationHeader. HeaderMenu has been replaced by NavigationHeaderMenu")
+  menus: [HeaderSubMenu] @deprecated(reason: "Header and it's family of objects, including HeaderMenu, have been replaced by NavigationHeader. HeaderMenu has been replaced by NavigationHeaderMenu")
+}
+
+type HeaderSubMenu {
+  sections: [HeaderSubMenuSection] @deprecated(reason: "Header and it's family of objects have been replaced by NavigationHeader")
+  mapsLinks: [Link] @deprecated(reason: "Header and it's family of objects have been replaced by NavigationHeader")
+  parkHours: Boolean @deprecated(reason: "Header and it's family of objects have been replaced by NavigationHeader")
+  otherLinks: [Link] @deprecated(reason: "Header and it's family of objects have been replaced by NavigationHeader")
+}
+
+type HeaderSubMenuSection {
+  title: String @deprecated(reason: "Header and it's family of objects have been replaced by NavigationHeader")
+  links: [Link] @deprecated(reason: "Header and it's family of objects have been replaced by NavigationHeader")
+}
+
+"""Help is a FAQ home page"""
+type Help implements Content {
+  """Unique Id of a content component"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  mainTitle: String
+  topics: [Topic]
+}
+
+type IFrame implements Content {
+  """Content"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  type: String
+  width: Int
+  height: Int
+  marginWidth: String
+  marginHeight: String
+  scrollbar: String
+  frameBorder: Int
+}
+
+type ImageDefinition implements KeyDefinition {
+  key: String
+  path: String
+  pageLink: PageLink
+  alt: String
+}
+
+type ImageMap implements Content {
+  """Content"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  title: String
+  media: Media
+  link: Button
+}
+
+type Item {
+  title: String
+  analyticsId: String
+  links: [Link]
+}
+
+interface KeyDefinition {
+  key: String
+}
+
+type KeyPairDefinition implements KeyDefinition {
+  key: String
+  value: String
+}
+
+type KeyReason {
+  iconFont: String
+  link: Button
+}
+
+type KeyTags {
+  key: String
+  tags: [Tag]
+}
+
+"""A attribute that can be associated with an activity"""
+type Keyword {
+  id: String
+  path: String
+  value: String
+}
+
+"""
+Labels is a list a key value pair (like a Dictionnary in resource but specific for a page))
+"""
+type Labels implements Content {
+  """Unique Id of a content component"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  labels: [Definition]
+}
+
+"""LanguageSelection is a list of country and markets"""
+type LanguageSelection implements Content {
+  contentId: String
+  containerTcmId: String
+  url: String
+  title: String
+  continentMedia: Media
+  countries: [Country]
+}
+
+"""Legal is a content to specify a legal notices"""
+type Legal implements Content {
+  contentId: String
+  containerTcmId: String
+  url: String
+  id: String
+  name: String
+  urlFriendlyId: String
+  shortDescription: String
+  paragraphs: [String]
+}
+
+type Link {
+  title: String
+  url: String
+  pageLink: PageLink
+  target: String
+  analyticsId: String
+}
+
+"""
+Location defines the position of an activity (a park, a land, Disney Village, a resort...)
+"""
+type Location {
+  value: String
+  urlFriendlyId: String
+  id: String
+  iconFont: String
+  url: String
+  pageLink: PageLink
+}
+
+type LoginLeftSide implements Content {
+  """Content"""
+  contentId: String
+  containerTcmId: String
+  url: String
+
+  """Content"""
+  title: String
+  reasons: [String]
+  link: Button
+}
+
+"""Geo-location data"""
+type MapCoordinates {
+  lat: Float
+  lng: Float
+  type: String
+}
+
+"""Contain Url of the different format of Map Tile"""
+type MapTile {
+  defaultTile: Media
+  responsiveTile: Media
+}
+
+"""Image"""
+type Media {
+  url: String
+  alt: String
+}
+
+"""MediaGallery is a media gallery"""
+type MediaGallery implements Content {
+  contentId: String
+  containerTcmId: String
+  url: String
+  books: [Book]
+}
+
+type MediaLink {
+  title: String
+  url: String
+  pageLink: PageLink
+  target: String
+  analyticsId: String
+  media: Media
+}
+
+type MenuItem {
+  title: String
+  text: String
+  labelMenu: String
+  media: Media
+  tabMedia: Media
+  tabOverMedia: Media
+  url: String
+  pageLink: PageLink
+}
+
+type MoreHelp implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  head: Button
+  home: Button
+  links: [Button]
+}
+
+type MultiDictionary implements Resource {
+  resourceId: String
+  resourceUrl: String
+  resourceTemplate: String
+  labels: [KeyPairDefinition]
+  images: [ImageDefinition]
+  richTexts: [RichTextDefinition]
+}
+
+type MyDlpMeta {
+  h1PageTitle: String
+  menuName: String
+  metaTitle: String
+  displayHeader: Boolean
+  displayFooter: Boolean
+  hasRightColumn: Boolean
+  skipLinks: Boolean
+  visibleForRoles: [String]
+  menuItemId: String
+  disableMenuRollover: Boolean
+  metadataDescription: String
+  metadataKeywords: String
+  metaCopyright: String
+}
+
+type Navigation implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  menus: [NavigationMenu]
+}
+
+type NavigationHeader implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  menus: [NavigationHeaderMenu]
+  labels: [Definition]
+}
+
+type NavigationHeaderMenu {
+  title: String
+  highlightElement: [NavigationHeaderMenuItem]
+  standardElement: [NavigationHeaderMenuItem]
+  secondaryLinks: [Link]
+  secondaryHighlightLink: Link
+  link: Link
+  pushes: [OPMPush]
+}
+
+type NavigationHeaderMenuItem {
+  title: String
+  subtitle: String
+  media: Media
+  link: Link
+}
+
+type NavigationMenu {
+  menuItems: [MenuItem]
+}
+
+"""
+NoData is a flag to specify no data are available (use to specify a display zone)
+"""
+type NoData implements Content {
+  """Unique Id of a content component"""
+  contentId: String
+  containerTcmId: String
+  url: String
+}
+
+type Offer implements Content {
+  """Content"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  viewAllOffers: Boolean
+  dateUp: String
+  dateDown: String
+  arrivalStartDate: String
+  arrivalEndDate: String
+  bookBy: String
+
+  """Landing Mentions"""
+  disclaimerTitle: String
+  disclaimerDescription: String
+
+  """Story telling"""
+  shortDescription: String
+  shortDescriptionMedia: Media
+
+  """Landing wow"""
+  name: String
+  wowMedia: Media
+  wowResponsiveMedia: Media
+  wowTitle: String
+  wowSubtitle: String
+  countDown: Boolean
+  blueModuleCard: BlueModuleCard
+  keyReasons: [KeyReason]
+}
+
+type OfferDrawer {
+  title: String
+  subTitle: String
+  media: Media
+  cards: [Card]
+}
+
+type OfferElement {
+  title: String
+  subTitle: String
+  description: String
+  media: Media
+  responsiveMedia: Media
+  links: [Button]
+  bestDeal: BestDeal
+  video: String
+  anchor: String
+}
+
+"""Elements"""
+type OfferElements implements Content {
+  contentId: String
+  containerTcmId: String
+  url: String
+  elements: [OfferElement]
+}
+
+type OfferStoryCard {
+  title: String
+  subTitle: String
+  media: Media
+  drawer: OfferDrawer
+  url: String
+  pageLink: PageLink
+  target: String
+  calendar: AnnualPassportCalendar
+  analyticsId: String
+}
+
+"""StoryCard"""
+type OfferStorySection implements Content {
+  """Content"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  pageLink: PageLink
+  type: String
+  title: String
+  subTitle: String
+  storyCards: [OfferStoryCard]
+}
+
+type OPM {
+  title: String
+  placement: String
+  displayType: String
+  pushes: [OPMPush]
+}
+
+"""
+OPMPlacement define a placement to display an offer push (the OPM data are available in resources)
+"""
+type OPMPlacement implements Content {
+  """Unique Id of a content component"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  id: String
+}
+
+type OPMPush {
+  dateUp: String
+  dateDown: String
+  target: String
+  analyticsId: String
+  countdown: Boolean
+  url: String
+  pageLink: PageLink
+  cards: [OPMPushCard]
+  offerDetails: Offer
+  activityDetails: Event
+}
+
+type OPMPushCard {
+  displayType: String
+  notClickable: Boolean
+  title: String
+  subTitle: String
+  description: String
+  buttonLabel: String
+  secondaryButton: Button
+  primaryMedias: [Media]
+  secondaryMedias: [Media]
+  video: String
+  autoplay: Boolean
+  placement: String
+  keyReasons: [KeyReason]
+  properties: [Keyword]
+  analyticsId: String
+}
+
+"""Overview is a content container for overview pages"""
+type Overview implements Content {
+  """Unique Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """Page url for content"""
+  url: String
+
+  """
+  TODO: [Not documented] - Unique identifier. It's possible to have an empty string
+  """
+  id: String
+
+  """Name text string"""
+  name: String
+
+  """Url / human friendly unique identifier"""
+  urlFriendlyId: String
+
+  """Summary description heading text string"""
+  shortDescriptionHeader: String
+
+  """Summary description body html string"""
+  shortDescriptionBody: String
+
+  """Main media resource"""
+  heroMedia: Media
+
+  """Main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """Call to action content"""
+  ctaCard: CtaCard
+
+  """A collection of StorySection content components"""
+  storySections: [StorySection]
+}
+
+type Page {
+  site: String
+  url: String
+  title: String
+  description: String
+  category: String
+  key: String
+  microdata: Boolean
+  canonicalUrl: [String]
+  keywords: [String]
+  robot: String
+  logoContentTop: Media
+  backgroundImageTop: [Media]
+  backgroundColor: String
+  hideBreadcrumbs: Boolean
+  redirectUrl: String
+  redirectPageLink: PageLink
+  breadcrumbs: [Breadcrumb]
+  pageInformation: PageInformation
+  regions: [Region]
+  contents: [Content]
+  tcmId: String
+  myDlpMeta: MyDlpMeta
+  visibleForRoles: [String]
+  menuItemId: String
+}
+
+type PageInformation {
+  pageIds: [String]
+  pageType: String
+  siteSection: String
+  entitySearch: String
+}
+
+"""Complete information about a link"""
+type PageLink {
+  tcmId: String
+  url: String
+  category: String
+  screenAliases: String
+  title: String
+  description: String
+  key: String
+  keywords: [String]
+  robot: String
+  regions: [Region]
+}
+
+type PaperBrochure implements Content {
+  """Content"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  roles: [String]
+  brochures: [Brochure]
+}
+
+"""Phone number"""
+type Phone {
+  """Type of service (CRO,...)"""
+  type: String
+
+  """Phone number"""
+  number: String
+}
+
+"""Point of interest with geo-location and location"""
+type POI {
+  name: String
+  location: Location
+  subLocation: Location
+  coordinates: [MapCoordinates]
+  smallMedia: Media
+  largeMedia: Media
+}
+
+type PopupLayer {
+  type: String
+  text: String
+  legalInfo: String
+  form: Form
+  buttonDisplayName: String
+}
+
+type PrepareTravel implements Content {
+  """Content"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  arrivalDateLabel: String
+  departureDateLabel: String
+  dropdownLabel: String
+  chooseYourHotelLabel: String
+  viewMoreButton: Button
+  buyNowButton: Button
+  viewMapButton: Button
+  seeMoreButtonTitle: String
+  titleMarkerLabel: String
+  attrClosMarkerLabel: String
+  restClosMarkerLabel: String
+  parkNameDisneyLabel: String
+  parkNameStudiosLabel: String
+  extraMagicHoursLabel: String
+  noAttrClosedLabel: String
+  noInformationMarkerLabel: String
+  howToGetToTitle: String
+  howToGetToDescription: String
+  howToGetAddressLabel: String
+  howToGetZipCityLabel: String
+  howToGetCountryLabel: String
+  howToGetArrivalAddressLabel: String
+  howToGetArrivalHotelNameLabel: String
+  howToGetArrivalHotelAddressLabel: String
+  howToGetHotelZipCityLabel: String
+  howToGetHotelCountryLabel: String
+  howToGetHotelGPSCoordsLabel: String
+  howToGetOptionsLabel: String
+  howToGetOptionTypeLabel: String
+  michelinSearchButtonTitle: String
+  michelinMapLabel: String
+  michelinDepartureMapLabel: String
+  michelinArrivalMapLabel: String
+  michelinMapDistanceLabel: String
+  michelinMapTimeLabel: String
+  michelinRoadsheetLabel: String
+}
+
+type Push {
+  displayPush: Boolean
+  title: String
+  description: String
+  backgroundImage: Media
+  pushImage: Media
+  buttonLabel: String
+  pushLink: String
+}
+
+type PushesSection {
+  displayType: String
+  title: String
+  subtitle: String
+  listOfPushes: [OPMPush]
+  name: String
+  url: Link
+  target: String
+  analyticsId: String
+}
+
+type PushMarketing implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  pushes: [Push]
+}
+
+type Query {
+  """Fetch a page by site, market and url"""
+  page(
+    """Webite or application"""
+    site: String
+
+    """
+    Describes the language and region, e.g en-gb is english and Great Britain
+    """
+    market: String!
+
+    """Url suffix for page"""
+    url: String!
+  ): Page
+
+  """Fetch a screen by application, market and tcmId"""
+  screen(
+    """Webite or application"""
+    application: String
+
+    """
+    Describes the language and region, e.g en-gb is english and Great Britain
+    """
+    market: String!
+
+    """Tridion Content Id"""
+    tcm: String!
+  ): Screen
+
+  """Fetch screens by application and market"""
+  screens(
+    """Webite or application"""
+    application: String
+
+    """
+    Describes the language and region, e.g en-gb is english and Great Britain
+    """
+    market: String!
+  ): [Screen]
+
+  """Fetch an error page by site, market and error code"""
+  error(
+    """Webite or application"""
+    site: String
+
+    """
+    Describes the language and region, e.g en-gb is english and Great Britain
+    """
+    market: String!
+
+    """Error code"""
+    code: Int
+  ): Page
+
+  """Fetch content by site, market and content type"""
+  contents(
+    """Webite or application"""
+    site: String
+
+    """
+    Describes the language and region, e.g en-gb is english and Great Britain
+    """
+    market: String!
+
+    """Filter by content types"""
+    types: [String]
+  ): [Content]
+
+  """Perform a search across activities and faqs with pagination"""
+  search(
+    """Webite or application"""
+    site: String
+
+    """
+    Describes the language and region, e.g en-gb is english and Great Britain
+    """
+    market: String!
+
+    """Filter by content types"""
+    types: [String]
+
+    """Search input to define query terms, size and pagination cursor"""
+    searchInput: SearchInput
+  ): SearchResult
+
+  """Fetch a collection of activities by site, market and resource key"""
+  resource(
+    """Webite or application"""
+    site: String
+
+    """
+    Describes the language and region, e.g en-gb is english and Great Britain
+    """
+    market: String!
+
+    """Resource key"""
+    key: String!
+
+    """Optional: Specify a shop"""
+    shop: String
+
+    """Optional: B2B or B2C"""
+    channel: String
+  ): Resource
+
+  """Fetch a MediaGallery by site, market and an activity id"""
+  mediaGallery(
+    """Webite or application"""
+    site: String
+
+    """
+    Describes the language and region, e.g en-gb is english and Great Britain
+    """
+    market: String!
+
+    """Activity id"""
+    id: String!
+  ): MediaGallery
+
+  """
+  Fetch a collection of ActivitySchedules by market, date, activity types and status
+  """
+  activitySchedules(
+    """
+    Describes the language and region, e.g en-gb is english and Great Britain
+    """
+    market: String!
+
+    """Filter by ISO date string"""
+    date: String!
+
+    """Filter by activity types and status"""
+    types: [ActivityScheduleStatusInput]!
+  ): [ActivitySchedule]
+
+  """Fetch schedules by market, date, activity id and activity type"""
+  schedules(
+    """
+    Describes the language and region, e.g en-gb is english and Great Britain
+    """
+    market: String!
+
+    """ISO date string (current if empty)"""
+    date: String!
+
+    """Number of days to query (1 by default)"""
+    duration: Int
+
+    """Activity id"""
+    id: String!
+
+    """Activity type"""
+    type: String!
+  ): [Schedule]
+
+  """Fetch a collection of activities by market and activity types"""
+  activities(
+    """
+    Describes the language and region, e.g en-gb is english and Great Britain
+    """
+    market: String
+
+    """Filter by activity types"""
+    types: [String]
+  ): [Activity]
+
+  """Fetch a collection of frequently asked question data"""
+  faqs(
+    """
+    Describes the language and region, e.g en-gb is english and Great Britain
+    """
+    market: String
+
+    """Topic of the question"""
+    category: String
+  ): [FAQDetail]
+
+  """Metadata from tridion used for XPM (TagMAnager)"""
+  meta(
+    """Tridion Content Id"""
+    tcm: String
+  ): TagManager
+
+  """Metadata from tridion used for XPM returne in a dictioanry format"""
+  metaDictionary(
+    """Webite or application"""
+    site: String
+
+    """
+    Describes the language and region, e.g en-gb is english and Great Britain
+    """
+    market: String!
+
+    """Resource key"""
+    key: String!
+
+    """Optional: Specify a shop"""
+    shop: String
+
+    """Optional: B2B or B2C"""
+    channel: String
+  ): DictionaryMeta
+
+  """Offer push manager, fetch offer by market and list of placement"""
+  opm(
+    """
+    Describes the language and region, e.g en-gb is english and Great Britain
+    """
+    market: String!
+
+    """Collection of text string id for where to place the content"""
+    placements: [String]!
+  ): [OPM]
+}
+
+"""
+QuickFilter is a mechanism for finding content based on Facets. Use example, a
+user is presented with text and selects a facet to later filter. Quick filter in
+the mobile application is called "Experience Finder"
+"""
+type QuickFilter implements Content {
+  """Unique Id of a content component"""
+  contentId: String
+
+  """Url of the page containing the content component"""
+  url: String
+
+  """Id of the container"""
+  containerTcmId: String
+  id: String
+  enabledFor: [String]
+
+  """Associated icon for the quick filter"""
+  logo: Media
+
+  """Title of the quick filter"""
+  title: String
+
+  """Subtitle of the quick filter"""
+  subtitle: String
+
+  """Color hex value for the background"""
+  bgColor: String
+
+  """Background media, normally an image, to display th"""
+  bgMediaMobile: Media
+
+  """Description of the purpose of the quick filter"""
+  loadingText: String
+
+  """Collection of text and associated facets"""
+  questions: [QuickFilterChoice]
+}
+
+type QuickFilterChoice {
+  title: String
+  subtitle: String
+  bgColor: String
+  bgMediaMobile: Media
+  facets: [Facet]
+}
+
+"""
+Recreation represents a collection of the general settings and information about a Recreation activity
+"""
+type Recreation implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """Collection of age requirements/restrictions for guests (use in filter)"""
+  age: [Facet]
+
+  """Collection of recreation type (use in filter)"""
+  activityTypes: [Facet]
+
+  """
+  Collection of RelatedLocation which are a collection of locations related to this activity
+  """
+  relatedLocations: [RelatedLocation]
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+}
+
+type RefurbishmentBio implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  closures: [Closure]
+}
+
+"""Modal for a refurbishment warning"""
+type RefurbishmentModal {
+  """Heading text string"""
+  header: String
+
+  """Body text string"""
+  body: String
+}
+
+type Region {
+  contentId: String!
+  templateId: String!
+  schemaId: String!
+}
+
+"""List of geo-location about points of interest"""
+type RelatedLocation {
+  type: String
+  poi: [POI]
+}
+
+"""
+Resort represents a collection of the general settings and information about a Resort
+"""
+type Resort implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """
+  Modal information to warn guests of an impending closure due to refurbishement
+  """
+  refurbishmentModal: RefurbishmentModal
+
+  """Quality rating of resort, e.g. 1 to 5 stars/keys"""
+  tier: String
+
+  """Quality rating description of resort, e.g. 1 to 5 stars/keys"""
+  tierDescription: String
+
+  """Icon font"""
+  iconFont: String
+  saleableRoomOnly: Boolean
+  sellablePackageOnly: Boolean
+
+  """True if Trip Advisor data available for activity"""
+  tripAdvisor: Boolean
+
+  """Collection of resort facilities (use in filter)"""
+  hotelCharacteristics: [Facet]
+
+  """Collection of resort types (use in filter)"""
+  hotelTypes: [Facet]
+
+  """Collection of resort category (use in filter)"""
+  hotelCategories: [Facet]
+
+  """
+  Collection of information about the distance between the resort and parks (use in filter)
+  """
+  hotelParkDistances: [Facet]
+
+  """Collection of resort facilities (use in filter)"""
+  hotelAmenities: [Facet]
+  checkInTime: String
+  checkOutTime: String
+  availabilityDescription: String
+
+  """Collection of parking information, e.g. valet parking"""
+  parkingTypes: [String]
+
+  """Content information for resort room rates"""
+  roomRates: ResortExtension
+
+  """Content information for resort recreation activities"""
+  recreation: ResortExtension
+
+  """Content information for resort dining"""
+  dining: ResortExtension
+
+  """Content information for resort amenities"""
+  amenities: ResortExtension
+
+  """Collection of room types"""
+  roomCategories: [RoomCategory]
+
+  """Url from the web application to book a resort"""
+  ddsUrl: String
+
+  """
+  Tells if a resort is being refurbished at the moment (to disable some
+  features, such as the booking link, the list of rooms ...)
+  """
+  hotelBeingRefurbished: Boolean
+
+  """
+  String meant to be a legend on the listing page in case of hotel being refurbished
+  """
+  listingRefurbishmentMessage: String
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+
+  """Url of image of the map"""
+  mapTile: MapTile
+}
+
+type ResortEvent {
+  startDate: String
+  endDate: String
+  description: String
+  permanent: Boolean
+}
+
+type ResortEvents {
+  hotelId: String
+  events: [ResortEvent]
+  tags: [TagEvent]
+}
+
+"""
+A container with information of additional services and facilities at a Resort
+"""
+type ResortExtension {
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """Collection of specific overview"""
+  cards: [Card]
+}
+
+type ResortsEvents implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  resortEvents: [ResortEvents]
+}
+
+"""A content resource object with a unique identifier"""
+interface Resource {
+  resourceId: String
+  resourceTemplate: String
+}
+
+type ResourceReference implements Content {
+  contentId: String
+  containerTcmId: String
+  url: String
+  key: String
+  ids: [String]
+  components: [Component]
+}
+
+"""
+Restaurant represents a collection of the general settings and information about a Restaurant
+"""
+type Restaurant implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """Collection of information about the food (use in filter)"""
+  cuisines: [Facet]
+
+  """Collection of information about the service (use in filter)"""
+  serviceTypes: [Facet]
+
+  """Price information (use in filter)"""
+  price: Facet
+
+  """True if web booking is enabled"""
+  drs: Boolean
+
+  """DRS trigram"""
+  drsTrigram: String
+
+  """Collection of dining plans (use in filter)"""
+  diningPlans: [Facet]
+
+  """Url for the menu pdf"""
+  menuUrl: String
+
+  """Url to booking this restaurant from internet"""
+  drsUrl: String
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+}
+
+type RichTextDefinition implements KeyDefinition {
+  key: String
+  value: String
+}
+
+"""A container of room category content"""
+type RoomCategory {
+  """Text string name of activity"""
+  name: String
+
+  """Unique identifier"""
+  id: String
+  amenities: [String]
+  services: [String]
+  roomType: [RoomType]
+}
+
+"""A container of room type content"""
+type RoomType {
+  """Room type unique identifier"""
+  id: String
+
+  """Name of a room type"""
+  name: String
+  suite: Boolean
+  concierge: Boolean
+
+  """Collection of facilities available to a room type"""
+  amenities: [String]
+
+  """Number of adults permitted in room type"""
+  maxAdultOccupancy: Int
+
+  """Collection of bed types for a room type"""
+  bedTypes: [[String]]
+
+  """Media resource"""
+  media: Media
+
+  """Media resource"""
+  squareMedia: Media
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+}
+
+type RulesDate {
+  date: Int
+  minBookingDays: Int
+  maxBookingDays: Int
+  bookableDay: Boolean
+}
+
+type Schedule {
+  startTime: String
+  endTime: String
+  date: String
+  status: ScheduleStatus
+  closed: Boolean
+  language: String
+}
+
+"""Enum of schedule status"""
+enum ScheduleStatus {
+  EXTRA_MAGIC_HOURS
+  OPERATING
+  REFURBISHMENT
+  PERFORMANCE_TIME
+  CLOSED
+
+  """Closed to guests for planned OPS reasons"""
+  CLOSED_OPS
+
+  """Unknown status"""
+  UNDEFINED
+}
+
+type Screen {
+  url: String
+  tcmId: String
+  regions: [Region]
+  contents: [Content]
+}
+
+"""This object contains criteria for an elasticsearch query"""
+input SearchInput {
+  """Text string"""
+  query: String!
+
+  """Limit the number of results"""
+  size: Int!
+
+  """Collection of cursor for query pagination in a connection"""
+  cursor: [String]
+
+  """
+  Collection of hide functionality strings to omit from the search results
+  """
+  hideFunctionality: [String]
+}
+
+type SearchResult {
+  query: String!
+  numberResult: Int!
+  results: [Content]
+  cursor: [String]
+}
+
+"""SecondaryFilterdefines the filter of a listing page"""
+type SecondaryFilter implements Content {
+  """Unique Id of a content component"""
+  contentId: String
+  containerTcmId: String
+  url: String
+  type: String
+  categories: [SecondaryFilterCategory]
+  mapTilesUrl: String
+}
+
+"""
+SecondaryFilterCategory defines a category in the filter of a listing page
+"""
+type SecondaryFilterCategory {
+  name: String
+  subCategories: [SecondaryFilterSubCategory]
+}
+
+"""
+SecondaryFilterSubCategory defines a sub category in the filter of a listing page
+"""
+type SecondaryFilterSubCategory {
+  name: String
+  key: String
+  values: [Facet]
+}
+
+type Section {
+  type: String
+  title: String
+  subTitle: String
+  subSubTitle: String
+  description: String
+  displayNameOfLink: String
+  targetForLink: String
+  media: Media
+  links: [Button]
+  button: Button
+  collapsingOption: String
+}
+
+"""
+Shop represents a collection of the general settings and information about a Shop activity
+"""
+type Shop implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """
+  Collection of information about the merchandise in a shop (use in filter)
+  """
+  merchandises: [Facet]
+
+  """
+  Collection of mobility requirements/restrictions for guests (use in filter)
+  """
+  mobilityDisabilities: [Facet]
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+}
+
+type ShortPath implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  ddsUrl: String
+  sections: [ShortPathSection]
+  shortPathTicket: ShortPathTicket
+  shortPathDateRule: [ShortPathDateRule]
+  labels: [Definition]
+  pageLink: PageLink
+}
+
+type ShortPathDateRule {
+  idDateRule: String
+  rulesDates: [RulesDate]
+}
+
+type ShortPathSection {
+  title: String
+  activities: [Activity]
+}
+
+type ShortPathTicket {
+  mainTitle: String
+  topics: [Topic]
+}
+
+type SignUpMenu {
+  title: String @deprecated(reason: "Will be deleted with footer v2.1")
+  text: String @deprecated(reason: "Will be deleted with footer v2.1")
+  link: Link @deprecated(reason: "Will be deleted with footer v2.1")
+}
+
+type SocialMenu {
+  title: String
+  links: [MediaLink]
+}
+
+"""
+Spa represents a collection of the general settings and information about a Spa activity
+"""
+type Spa implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """List of service delivered (use in filter)"""
+  serviceTypes: [Facet]
+
+  """List of interest for this activity (use in filter)"""
+  interests: [Facet]
+
+  """
+  Collection of RelatedLocation which are a collection of locations related to this activity
+  """
+  relatedLocations: [RelatedLocation]
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+}
+
+type Spoff implements Content {
+  contentId: String
+  containerTcmId: String
+  url: String
+  pushesSection: [PushesSection]
+}
+
+"""
+Sponsor represents a collection of the general settings and information about sponsered activity
+"""
+type Sponsor implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """Further informations"""
+  listDescription: String
+
+  """List of sponsor type (use in filter)"""
+  sponsorTypes: [Facet]
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+}
+
+type StandardGlobal implements Content {
+  """Unique Id of a content component"""
+  contentId: String
+
+  """Url of the page containing the content component"""
+  url: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """Unique Id of a content component"""
+  id: String
+
+  """Name or title of the component"""
+  name: String
+
+  """Subtitle of content"""
+  subtitle: String
+
+  """short Description"""
+  shortDescription: String
+
+  """Description designed for mobile devices"""
+  shortDescriptionMobile: String
+
+  """Disclaimer information"""
+  disclaimer: String
+
+  """Multimedia Component Link"""
+  heroMedia: Media
+
+  """Multimedia Component Link - mobile only"""
+  heroMediaMobile: Media
+
+  """Call to action - link to further content"""
+  button: Button
+
+  """List of Keyword, attributs, specific to the content"""
+  keywords: [Keyword]
+  iconFonts: [String]
+  backgroundColors: [String]
+}
+
+type StandardSectionCard implements Content {
+  """Unique Id of a content component"""
+  contentId: String
+
+  """Url of the page containing the content component"""
+  url: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """title of content"""
+  title: String
+
+  """Subtitle of content"""
+  subtitle: String
+
+  """Multimedia component"""
+  media: Media
+
+  """embedded cards"""
+  embeddedCards: [EmbeddedStoryCard]
+
+  """layout"""
+  layout: String
+
+  """icon Font"""
+  iconFont: String
+}
+
+"""StoryCard is a specific overview with exensible area"""
+type StoryCard {
+  title: String
+  subTitle: String
+  media: Media
+  drawer: Drawer
+  url: String
+  pageLink: PageLink
+  analyticsId: String
+}
+
+"""StorySection is a specific component to display an album of story card"""
+type StorySection {
+  type: String
+  title: String
+  subTitle: String
+  storyCards: [StoryCard]
+}
+
+"""SubChapter is a "sub sub" category in a media gallery"""
+type SubChapter {
+  title: String
+  referenceKey: String
+  thumbMedia: Media
+  assets: [Asset]
+}
+
+union Tag = ComponentTag | FieldTag
+
+type TagEvent {
+  description: String
+  value: String
+}
+
+type TagManager {
+  tags: [KeyTags]
+}
+
+"""
+A thematic is an object that contains a collection of #Activity based around a theme, e.g. Disney super heroes
+"""
+type Thematic implements Content {
+  """Unique Id of a content component"""
+  contentId: String
+
+  """Url of the page containing the content component"""
+  url: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """Unique Id of a content component"""
+  id: String
+
+  """Title text of theme"""
+  title: String
+
+  """Description text of theme"""
+  description: String
+
+  """Image/video for character"""
+  heroMediaMobile: Media
+
+  """Thumbnail image"""
+  squareMedia: Media
+
+  """List of activities included the thematic"""
+  activitiesList: [Activity]
+}
+
+"""
+ThemePark represents a collection of the general settings and information about a theme park.
+"""
+type ThemePark implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """inconFont"""
+  iconFont: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """Url string to buy a ticket from internet"""
+  buyParkTicketsUrl: String
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+}
+
+type Tip {
+  iconFont: String
+  Buttons: [TipButton]
+  media: Media
+  title: String
+  description: String
+  ctaLabel: String
+  types: String
+  externalLinks: [ExternalLink]
+}
+
+type TipButton {
+  media: Media
+  link: String
+}
+
+type Tips implements Resource {
+  resourceId: String
+  resourceTemplate: String
+  title: String
+  tipsCards: [Tip]
+}
+
+type Topic {
+  title: String
+  description: String
+  iconFont: String
+  url: String
+  pageLink: PageLink
+  analyticsId: String
+}
+
+"""
+Tour represents a collection of the general settings and information about a Tour activity
+"""
+type Tour implements Content & Activity {
+  """Id of a content component"""
+  contentId: String
+
+  """Id of the container"""
+  containerTcmId: String
+
+  """category of activity"""
+  entityType: String
+
+  """Unique identifier"""
+  id: String
+
+  """Url / human friendly unique identifier for an activity"""
+  urlFriendlyId: String
+
+  """Url of the page"""
+  url: String
+
+  """link to the page (url, tcmId, list of regions)"""
+  pageLink: PageLink
+
+  """
+  This text string is used to hide the page from specific versions of the page, e.g. mobile
+  """
+  hideFunctionality: String
+
+  """Text string name of activity"""
+  name: String
+
+  """The main media resource"""
+  heroMedia: Media
+
+  """The thumbnail media resource"""
+  thumbMedia: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMedia: Media
+
+  """Sub-category"""
+  subType: String
+
+  """The main location of the activity, e.g. DisneyLand Park"""
+  location: Location
+
+  """A region with the main location, e.g. Discovery Land"""
+  subLocation: Location
+
+  """True if activity is ticketed"""
+  admissionRequired: Boolean
+
+  """Collection of policy information in text string"""
+  guestPolicies: [String]
+
+  """Text string summary description of the activity"""
+  shortDescription: String
+
+  """
+  Text string is non-empty to warn guests of an impending closure due to refurbishement
+  """
+  refurbishment: String
+
+  """Telefonic contact details"""
+  phone: Phone
+
+  """Postal address details"""
+  address: Address
+
+  """Geo-location of activity"""
+  coordinates: [MapCoordinates]
+
+  """Collection of specific overview"""
+  cards: [Card]
+
+  """True if owned by Disney"""
+  disneyOwned: Boolean
+
+  """
+  True if operated by Disney - it's possible to be Disney owned but not operated
+  """
+  disneyOperated: Boolean
+
+  """The main media resource for mobile"""
+  heroMediaMobile: Media
+
+  """The same as the heroMedia resource but in a square format"""
+  squareMediaMobile: Media
+
+  """Text string summary description of the activity for mobile"""
+  shortDescriptionMobile: String
+
+  """True if there is a welcome available for mobile"""
+  welcomeScreenMobile: Boolean
+
+  """Collection of Schedule data"""
+  schedules: [Schedule]
+
+  """True if the activity is closed"""
+  closed: Boolean
+
+  """Url string for minimap content"""
+  miniMapUrl: String
+
+  """Container with the duration of this activity"""
+  duration: Duration
+
+  """ISO date string when activity starts"""
+  openDate: String
+
+  """ISO date string when activity finished"""
+  endDate: String
+
+  """List of interest for this activity (use in filter)"""
+  interests: [Facet]
+
+  """
+  Collection of mobility requirements/restrictions for guests (use in filter)
+  """
+  mobilityDisabilities: [Facet]
+
+  """Collection of experience type (use in filter)"""
+  experienceTypes: [Facet]
+
+  """Collection of age requirements/restrictions for guests (use in filter)"""
+  age: [Facet]
+
+  """
+  Collection of RelatedLocation which are a collection of locations related to this activity
+  """
+  relatedLocations: [RelatedLocation]
+
+  """True if has the photopass service"""
+  photopass: Boolean
+
+  """List of Keyword, attributs, specific to an activity"""
+  keywords: [Keyword]
+
+  """List of Blue Module Cards associated with the activity"""
+  blueModuleCards: [BlueModuleCard]
+
+  """
+  For activities that should be highlighted (put at the top of listings for instance)
+  """
+  highlight: Boolean
+}
+
+type Type {
+  id: String
+  path: String
+  value: String
+}
+
+type XPathMeta {
+  componentId: String
+  templateId: String
+  key: String
+  value: String
+}
+
