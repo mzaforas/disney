@@ -1,5 +1,4 @@
-import requests
-import uuid
+import json
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
 
@@ -16,6 +15,7 @@ client = Client(
     transport=_transport,
     fetch_schema_from_transport=True,
 )
+
 query = gql("""
 {
     activities(market: "es-es", types: ["Attraction"]) {
@@ -24,7 +24,9 @@ query = gql("""
 }
 """)
 
-print(client.execute(query))
+print(json.dumps(client.execute(query), indent=1))
+
+
 
 #        query: 'query
 
